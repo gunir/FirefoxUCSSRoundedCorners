@@ -1,0 +1,25 @@
+#tabbrowser-tabbox {
+  position: relative;
+  overflow: hidden;
+}
+
+/* inner rounded corners */
+#tabbrowser-tabbox::after {
+  content: "";
+  inset: -4px;
+  position: absolute;
+  border: 10px solid var(--toolbar-bgcolor);
+  border-radius: 18px;
+  z-index:1;
+ pointer-events:none;
+}
+
+/* outer border */
+#tabbrowser-tabbox::before {
+  content: "";
+  inset: -2px;
+  position: absolute;
+  border: 4px solid var(--toolbar-bgcolor);
+  z-index:1;
+  pointer-events:none;
+}
